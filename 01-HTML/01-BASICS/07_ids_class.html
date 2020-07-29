@@ -19,17 +19,19 @@
     </style>
 </head>
 <body>
+   
+    <!--ul#main-nav>(li>a)*3 "advised by:Hussnain"-->
+    <!-- ul#main-nav>li*3>a "advised by:Glauber"-->
+    <ul id="main-nav">
+        <li><a href="#main-header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+   <!-- #main-header.card>h1{My Website}+p{A site about me} -->
     <div id="main-header" class="card">
         <h1>My Website</h1>
         <p>A site about me</p>
     </div>
-    <!--ul#main-nav>(li>a)*3 ":Hussnain"-->
-    <!-- ul#main-nav>li*3>a ":Glauber"-->
-    <ul id="main-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
 <!-- #about.card>h3{About}+p>lorem -->
 <div id="about" class="card">
     <h3>About</h3>
