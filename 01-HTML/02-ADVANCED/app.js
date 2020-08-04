@@ -18,7 +18,7 @@ const server = app.listen(5000, function () {
 
 app.get("/", function (req, res) {
 	res.sendFile(
-		"/home/glaubernespoli/workspace/dci/FbW39_Lessons/01-HTML/02-ADVANCED/index.html"
+		"what are you doing"
 	);
 });
 
