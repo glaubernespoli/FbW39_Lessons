@@ -17,9 +17,15 @@ const server = app.listen(5000, function () {
 });
 
 app.get("/", function (req, res) {
+<<<<<<< HEAD
     res.sendFile(
         "/home/glaubernespoli/workspace/dci/FbW39_Lessons/01-HTML/02-ADVANCED/lalala.html"
     );
+=======
+	res.sendFile(
+		"what are you doing"
+	);
+>>>>>>> d3068451788c44f1f1e3c55ced1df34a75c01000
 });
 
 app.post("/submit", function (req, res) {
