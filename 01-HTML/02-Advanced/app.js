@@ -52,17 +52,19 @@ const bodyParser = require('body-parser')
 const app = express()
 
 //USE a middleware
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json()) //decode the body
+app.use(bodyParser.urlencoded({extended:false})) // decode the header
+//extended:false means that this {x:{y:{z:5}}} is not allowed
 
 //View the HTML Form with GET request
 app.get('/', function(req, res){
+    console.log(req.body)
     res.sendFile('/home/safwan/Documents/fbw39/FbW39_Lessons/01-HTML/02-Advanced/index.html')
 })
 
 //POST (submit) request
 app.post('/submit-student-data', function(req, res){
-    console.log(req.body.secondname)
+    console.log(req.body)
     res.send('Hello: '+req.body.firstname)
 })
 
