@@ -1,0 +1,27 @@
+h1 {
+  background-color: yellow;
+}
+
+div {
+  background-color: blue;
+}
+
+div h1 {
+  background-color: green;
+}
+
+div p span {
+  background-color: red;
+}
+
+h1>p {
+  background-color: hotpink;
+}
+
+section+div {
+  background-color: rgb(236, 31, 9);
+}
+
+h1~p {
+  background-color: salmon;
+}

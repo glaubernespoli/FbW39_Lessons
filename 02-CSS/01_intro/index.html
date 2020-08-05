@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- All elements would take the style from * -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External Style using link -->
+    <link rel="stylesheet" href="style.css">
+    <title>Introduction</title>
+    <!-- Internal Style using styel element -->
+    <style>
+        .example {
+            background-color: burlywood;
+            color: darkblue;
+        }
+
+        #title_one {
+            text-align: right;
+            color: black;
+            font-size: xx-large;
+            font-weight: bold;
+            background-color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- inline style using style attribute -->
+    <h1 style="background-color: chocolate; color: cyan;">Welcome to CSS</h1>
+    <p class="example">CSS stands for Cascading Style Sheets</p>
+    Here is a free text
+
+    <div style="color: darkred;">
+        Division 1
+        <div>
+            division 2
+        </div>
+    </div>
+    <div>
+        division 3
+    </div>
+    <!-- inline elements take the style form body -->
+    <a href="#">anchor: inline elemnt</a>
+    <!-- <hr> draw a horizontal line -->
+    <hr>
+    <div id="title_one">This is a Title</div>
+</body>
+
+</html>
