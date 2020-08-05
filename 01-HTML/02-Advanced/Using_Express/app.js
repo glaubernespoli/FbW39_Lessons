@@ -47,29 +47,32 @@
 
 // 03-Handling HTML FROM
 
-const express = require('express')
-const bodyParser = require('body-parser')
-const app = express()
-
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
 //USE a middleware
-app.use(bodyParser.json()) //decode the body
-app.use(bodyParser.urlencoded({extended:false})) // decode the header
+app.use(bodyParser.json()); //decode the body
+app.use(bodyParser.urlencoded({
+    extended: false
+})); // decode the header
 //extended:false means that this {x:{y:{z:5}}} is not allowed
 
 //View the HTML Form with GET request
-app.get('/', function(req, res){
-    console.log(req.body)
-    res.sendFile('/home/safwan/Documents/fbw39/FbW39_Lessons/01-HTML/02-Advanced/index.html')
-})
+app.get('/', function (req, res) {
+    console.log(req.body);
+    res.sendFile('/home/safwan/Documents/fbw39/FbW39_Lessons/01-HTML/02-Advanced/index.html');
+});
 
 //POST (submit) request
-app.post('/submit-student-data', function(req, res){
-    console.log(req.body)
-    res.send('Hello: '+req.body.firstname)
-})
+app.post('/submit-student-data', function (req, res) {
+    console.log(req.body);
+    res.send('Hello: ' + req.body.firstname);
+});
 
 
 
-const port = 5050
+const port = 5050;
 
-let server = app.listen(port, function(){console.log('Node server is listening to port: '+port)})
+app.listen(port, function () {
+    console.log('Node server is listening to port: ' + port);
+});
