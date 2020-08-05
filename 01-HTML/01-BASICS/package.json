@@ -1,15 +1,19 @@
 {
-  "name": "01-basics",
-  "version": "1.0.0",
-  "description": "basic html elements",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "live-server"
-  },
-  "author": "Safwan",
-  "license": "ISC",
-  "dependencies": {
-    "live-server": "^1.2.1"
-  }
+	"name": "01-basics",
+	"version": "1.0.0",
+	"description": "basic html elements",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"server": "live-server",
+		"start": "nodemon index"
+	},
+	"author": "Safwan",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"express": "^4.17.1",
+		"live-server": "^1.2.1"
+	}
 }

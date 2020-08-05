@@ -1,56 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 Semantics</title>
     <style>
-        *{
-            box-sizing:border-box
+        * {
+            box-sizing: border-box
         }
-        ul{
+
+        ul {
             padding: 0;
             list-style: none;
         }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             color: #333;
             line-height: 1.4;
         }
-        #header{
+
+        #header {
             margin-bottom: 15px;
-            background:#333 ;
-            color: #fff;
-            padding: 10px;
-        }
-        #main{
-            float:left;
-            width: 69%;
-        }
-        #sidebar{
-            float:right;
-            width:29%;
-        }
-        .clr{
-            clear:both;
-        }
-        #footer{
             background: #333;
             color: #fff;
             padding: 10px;
         }
-        .card{
+
+        #main {
+            float: left;
+            width: 69%;
+        }
+
+        #sidebar {
+            float: right;
+            width: 29%;
+        }
+
+        .clr {
+            clear: both;
+        }
+
+        #footer {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .card {
             border: 1px solid #ddd;
             background: #f4f4f4;
             padding: 20px;
             margin-bottom: 10px;
         }
-        .text-center{
-            display:block;
+
+        .text-center {
+            display: block;
             text-align: center;
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header id="header" class="card">
@@ -67,7 +78,7 @@
                 cupiditate itaque possimus numquam corporis odit deserunt voluptas
                 repellat ad ex earum magnam mollitia magni eaque nisi, excepturi nam
                 temporibus! Sed.<br>
-            <a href="#" class="text-center">Click For More</a></p>
+                <a href="#" class="text-center">Click For More</a></p>
         </section>
         <!-- Blog Section -->
         <section id="blog">
@@ -98,9 +109,9 @@
         <!-- Navigation -->
         <nav>
             <ul id="main-nav">
-                 <li><a href="index.html">Home</a></li>
-                 <li><a href="about.html">About</a></li>
-                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
         <hr>
@@ -121,4 +132,5 @@
     </footer>
 
 </body>
+
 </html>
