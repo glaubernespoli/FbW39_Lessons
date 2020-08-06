@@ -1,0 +1,25 @@
+* {
+    text-align: center;
+}
+
+body {
+    background-color: blueviolet;
+}
+
+
+
+div span {
+    background-color: goldenrod;
+}
+
+div>span {
+    background-color: blue;
+}
+
+div~span {
+    background-color: greenyellow;
+}
+
+div+span {
+    background-color: brown;
+}
