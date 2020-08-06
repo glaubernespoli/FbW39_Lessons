@@ -1,0 +1,22 @@
+div.class1:hover {
+    background-color: greenyellow;
+
+}
+
+#id1:hover {
+    background-color: indianred;
+}
+
+div:hover {
+    color: red;
+    font-weight: bold;
+}
+
+p.class2:hover {
+    background-color: mediumseagreen;
+}
+
+#id2:hover {
+    font-size: xx-large;
+    font-weight: 900;
+}
