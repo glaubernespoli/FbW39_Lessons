@@ -1,0 +1,15 @@
+{
+  "name": "02-css",
+  "version": "1.0.0",
+  "description": "CSS lessons",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "author": "FbW39",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
