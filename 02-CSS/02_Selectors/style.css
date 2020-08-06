@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
   background-color: yellow;
 }
 
@@ -24,4 +24,74 @@ section+div {
 
 h1~p {
   background-color: salmon;
+} */
+
+/* a {
+  background-color: grey;
+  color: white;
+  text-decoration: none;
+} */
+
+/* a:link - a normal, unvisited link */
+/* a:link {
+  color: red
+} */
+
+/* visited link */
+/* a:visited {
+  color: green;
+} */
+
+/* hover*/
+/* a:hover {
+  color: pink;
+} */
+
+/*active selected*/
+/* a:active {
+  color: black
+} */
+
+/* hover*/
+/* p:hover {
+  background-color: lightblue;
+} */
+
+/*class hover*/
+/* .test:hover {
+  background-color: orangered
+} */
+
+h1:empty {
+  width: 100px;
+  height: 20px;
+  background-color: yellow;
+}
+
+input:focus {
+  background-color: teal;
+}
+
+ul li:nth-child(2) {
+  background-color: tomato;
+}
+
+ol li:nth-child(2) {
+  background-color: tomato;
+}
+
+li:nth-child(odd):hover {
+  background-color: turquoise;
+}
+
+li:nth-child(even) {
+  background-color: rgb(194, 148, 190);
+}
+
+li:nth-last-child(4) {
+  background-color: yellow;
+}
+
+p:nth-child(2) {
+  background-color: blue;
 }
