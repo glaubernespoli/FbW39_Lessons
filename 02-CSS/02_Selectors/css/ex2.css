@@ -1,0 +1,57 @@
+/**
+1st p bg yellow
+h1 color pink
+2nd p bg red
+3rd p bg purple
+**/
+
+p:first-child:hover {
+    background-color: yellow;
+}
+
+h1:hover {
+    color: pink;
+}
+
+/** other solutions that would also work: 
+p~p:hover -> color every other p after the first one 
+h1~p:hover -> color every other p after the h1
+
+PS: the way it is right now, order matters, as h1~p and h1+p would conflict, so the last one prevails.
+**/
+h1~p:hover {
+    background-color: purple;
+}
+
+h1+p:hover {
+    background-color: red;
+}
+
+span:nth-child(2) {
+    background-color: blue;
+}
+
+
+/** ===================================== **/
+
+li:empty {
+    background-color: grey;
+    width: 100px;
+    height: 20px;
+}
+
+li:nth-child(6) {
+    background-color: red;
+}
+
+li:nth-child(even) {
+    font-size: xx-large;
+}
+
+li:nth-child(odd) {
+    font-size: medium;
+}
+
+li:hover:not(:empty):not(:nth-child(6)) {
+    background-color: aqua;
+}

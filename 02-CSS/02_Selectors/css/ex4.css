@@ -1,0 +1,33 @@
+/**
+.class1: hover color & bg-color green & red & bold
+
+#id1: bg color & color
+
+loose div after div: red text bold
+
+class2: bg green
+
+id2: bigger text bold
+**/
+
+div:hover {
+    color: tomato;
+    font-weight: bold;
+}
+
+div.class1:hover {
+    background-color: greenyellow;
+}
+
+#id1:hover {
+    background-color: brown;
+}
+
+.class2:hover {
+    background-color: lightgreen;
+}
+
+#id2:hover {
+    font-size: xx-large;
+    font-weight: bold;
+}
