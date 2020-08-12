@@ -1,0 +1,19 @@
+div {
+    background-color: blue;
+}
+
+div>p {
+    background-color: green;
+}
+
+
+body>p+p {
+    background-color: red;
+    color: yellow;
+}
+
+
+
+div+p {
+    color: yellow;
+}

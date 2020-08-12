@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed</title>
+    <style>
+        div.fixed {
+            position: fixed;
+            border: 3px solid greenyellow;
+            top: 0;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>position:fixed;</h2>
+    <div style="padding-bottom:2000px">
+        <p>The element with position:fixed; would always keep its position relative to the viewport, so it dosen't
+            disappear
+            when scrolling</p>
+        <div class="fixed">This div has position:fixed;</div>
+    </div>
+
+</body>
+
+</html>

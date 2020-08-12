@@ -1,0 +1,22 @@
+li:nth-child(6) {
+    background-color: red;
+}
+
+li:nth-child(even) {
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+li:empty {
+    background-color: gray;
+    width: 100px;
+    height: 20px;
+}
+
+/* li:not(:empty):not(:nth-child(6)):hover {
+    background-color: lightblue;
+} */
+
+li:hover:not(:nth-child(6)):not(:empty) {
+    background-color: lightblue;
+}

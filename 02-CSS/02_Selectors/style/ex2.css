@@ -1,0 +1,15 @@
+h1:hover {
+    color: pink;
+}
+
+h1+p:hover {
+    background-color: red;
+}
+
+p:hover {
+    background-color: yellow;
+}
+
+p+p:hover {
+    background-color: blue;
+}
