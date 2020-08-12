@@ -6,15 +6,15 @@ const app = express();
 
 fs.readdir('/home/glaubernespoli/workspace/dci/FbW39_Lessons/02-CSS/03_Exercise/public/html', (err, files) => {
     if (err) {
-        console.log('Unable to scan directory: ' + err);
+        console.log('Unable to scan html directory: ' + err);
     }
 
     files.forEach(file => {
         let path = file.split('.html')[0];
-        console.log(path);
         if(path === 'index') {
             path = '';
         }
+        console.log(`Creating route /${path}`);
         app.get(`/${path}`, (req, res) => {
             res.sendFile(`/home/glaubernespoli/workspace/dci/FbW39_Lessons/02-CSS/03_Exercise/public/html/${file}`);
         });
