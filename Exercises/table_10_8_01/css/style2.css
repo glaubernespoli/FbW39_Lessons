@@ -1,0 +1,24 @@
+table.tableCells {
+    border: 4px solid #555555;
+    background-color: #555555;
+    width: 400px;
+    text-align: center;
+    border-collapse: collapse;
+
+}
+
+table.tableCells tbody td {
+    border: 1px solid #555555;
+    padding: 4px 7px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+}
+
+table.tableCells tbody tr:nth-child(even) {
+    background-color: #A43152;
+}
+
+table.tableCells tbody td:nth-child(even) {
+    background-color: #A43152;
+}
