@@ -9,7 +9,7 @@
         div.fixed {
             position: fixed;
             border: 3px solid greenyellow;
-            bottom: 0;
+            top: 0;
             width: 300px;
         }
     </style>
@@ -17,9 +17,13 @@
 
 <body>
     <h2>position:fixed;</h2>
-    <p>The element with position:fixed; would always keep its position relative to the viewport, so it dosen't disappear
-        when scrolling</p>
-    <div class="fixed">This div has position:fixed;</div>
+    <div style="padding-bottom:2000px">
+        <p>The element with position:fixed; would always keep its position relative to the viewport, so it dosen't
+            disappear
+            when scrolling</p>
+        <div class="fixed">This div has position:fixed;</div>
+    </div>
+
 </body>
 
 </html>
