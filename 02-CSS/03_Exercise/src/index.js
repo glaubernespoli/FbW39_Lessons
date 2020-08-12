@@ -1,27 +1,33 @@
 const express = require('express');
+const fs = require('fs');
 
 const port = 5000;
 const app = express();
 
 app.use(
     express.static(
-        '/home/glaubernespoli/workspace/dci/FbW39_Lessons/02-CSS/03_Exercise/public'
+        '/home/glaubernespoli/workspace/dci/FbW39_Lessons/02-CSS/03_Exercise/public', {
+            index: "html/index.html"
+        }
     )
-).get('/ex4-1', (req, res) => {
-    res.sendFile(`/home/glaubernespoli/workspace/dci/FbW39_Lessons/02-CSS/03_Exercise/public/html/ex4-1.html`);
-}).get('/ex4-2', (req, res) => {
-    res.sendFile(`/home/glaubernespoli/workspace/dci/FbW39_Lessons/02-CSS/03_Exercise/public/html/ex4-2.html`);
-}).get('/ex4-3', (req, res) => {
-    res.sendFile(`/home/glaubernespoli/workspace/dci/FbW39_Lessons/02-CSS/03_Exercise/public/html/ex4-3.html`);
+).get('/', (req, res) => {
+    res.sendFile('/home/glaubernespoli/workspace/dci/FbW39_Lessons/02-CSS/03_Exercise/public/html/index.html');
 });
 
-//total exercises file
-const totalExercises = 5;
-for (let i = 1; i <= totalExercises; i++) {
-    const exNumber = i;
-    app.get('/ex' + i, (req, res) => {
-        res.sendFile(`/home/glaubernespoli/workspace/dci/FbW39_Lessons/02-CSS/03_Exercise/public/html/ex${exNumber}.html`);
+fs.readdir('/home/glaubernespoli/workspace/dci/FbW39_Lessons/02-CSS/03_Exercise/public/html', (err, files) => {
+    if (err) {
+        console.log('Unable to scan directory: ' + err);
+    }
+
+    files.forEach(file => {
+        let path = file.split('.html')[0];
+        console.log(path);
+        if (path !== 'index') {
+            app.get(`/${path}`, (req, res) => {
+                res.sendFile(`/home/glaubernespoli/workspace/dci/FbW39_Lessons/02-CSS/03_Exercise/public/html/${file}`);
+            });
+        }
     });
-}
+});
 
 app.listen(port, () => console.log(`Server up on port ${port}`));
