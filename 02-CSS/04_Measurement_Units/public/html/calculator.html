@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurement Units Calculator</title>
+    <link rel="stylesheet" href="../css/calculator.css">
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <h1>Measurement Units</h1>
+        <h2>Absolute Units</h2>
+        <div class="unit-wrapper">
+            <button class="btn-cm" data-unit="cm">Centimeter (cm)</button>
+            <button class="btn-mm" data-unit="mm">Milimeter (mm)</button>
+            <button class="btn-in" data-unit="in">Inches (in)</button>
+            <button class="btn-px" data-unit="px">Pixels (px)</button>
+            <button class="btn-pt" data-unit="pt">Points (pt)</button>
+            <button class="btn-pc" data-unit="pc">Pica (pc)</button>
+        </div>
+        <div class="selected-wrapper">
+            <div class="unit-info">a</div>
+            <div class="unit-range">b</div>
+            <div class="unit-display">c</div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module" src="../js/calculator.js"></script>
+</body>
+
+</html>
+
+<!-- Div no centro com:
+
+=========================================RANGE BAR================================================================
+INPUT(min value, editable) INPUT(current value, editable) INPUT(max value, editable) -->

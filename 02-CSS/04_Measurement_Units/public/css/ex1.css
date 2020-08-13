@@ -1,0 +1,15 @@
+div {
+    border: 1px solid black;
+}
+
+div.boxvw {
+    width: 30vw;
+    height: 30vw;
+    font-size: 5vw;
+}
+
+div.boxvh {
+    width: 30vh;
+    height: 30vh;
+    font-size: 5vh;
+}

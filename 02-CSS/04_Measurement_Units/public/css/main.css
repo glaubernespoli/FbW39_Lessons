@@ -1,0 +1,137 @@
+* {
+    margin: 5px;
+}
+
+body {
+    background-color: #0f2e3d;
+    color: #e8e6e3;
+    /* background-color: rgba(163, 155, 155, 0.877);
+    color: rgba(32, 32, 34, 0.534); */
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+    border-bottom: 2px solid #e8e6e3;
+}
+
+section h3 {
+    margin-top: 2em;
+    font-size: x-large;
+    background-image: linear-gradient(#e8e6e3, #e8e6e3);
+    background-repeat: no-repeat;
+    background-size: 50% 2px, calc(100% - 4px) 100%;
+    background-position: left bottom, 0 4px;
+}
+
+section h3::before {
+    content: "•";
+    margin-right: 5px;
+}
+
+section h3::after {
+    width: 50%;
+    border-bottom: none;
+}
+
+div {
+    height: 18px;
+}
+
+div.info {
+    font-weight: bold;
+    border: 2px solid #e8e6e3;
+    border-radius: 5px;
+    height: initial;
+    display: inline-block;
+}
+
+label {
+    display: block;
+}
+
+.cm {
+    background-color: rgb(204, 135, 135);
+}
+
+.mm {
+    background-color: rgb(204, 194, 135);
+}
+
+.in {
+    background-color: rgb(143, 204, 135);
+}
+
+.px {
+    background-color: rgb(135, 204, 201);
+}
+
+.cm-10 {
+    width: 10cm;
+}
+
+.mm-10 {
+    width: 10mm;
+}
+
+.in-10 {
+    width: 10in;
+}
+
+.px-10 {
+    width: 10px;
+}
+
+/* to cm */
+.mm-10cm {
+    width: 100mm;
+}
+
+.px-10cm {
+    width: 377.95275591px;
+}
+
+.in-10cm {
+    width: 3.937007874in;
+}
+
+/* to mm */
+.cm-10mm {
+    width: 1cm;
+}
+
+.in-10mm {
+    width: 0.3937007874in;
+}
+
+.px-10mm {
+    width: 37.795275591px;
+}
+
+.cm-10in {
+    width: 25.4cm;
+}
+
+.mm-10in {
+    width: 254mm;
+}
+
+.px-10in {
+    width: 960px;
+}
+
+.cm-10px {
+    width: 0.2645833333cm;
+}
+
+.mm-10px {
+    width: 2.6458333333mm;
+}
+
+.in-10px {
+    width: 0.1041666667in;
+}
