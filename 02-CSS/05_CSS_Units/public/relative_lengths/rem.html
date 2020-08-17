@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem</title>
+    <style>
+        /* html {
+            font-size: 20px;
+        } */
+
+        p.em {
+            border: 10px solid gold;
+            font-size: 10px;
+            padding: 1rem;
+            background-color: coral;
+        }
+
+        p.em1 {
+            padding: 3rem;
+            background-color: lightgreen;
+        }
+
+        div.adam {
+            border: 1px solid black;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>rem</h1>
+    <p>Relative to font-size of the root element</p>
+    <p class="em">em is one time of the current font by default it is 16px</p>
+
+    <div class="adam">
+        some dummy text
+        <p class="em1">
+            I am inside a div
+        </p>
+    </div>
+</body>
+
+</html>

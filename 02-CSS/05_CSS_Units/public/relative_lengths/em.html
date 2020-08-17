@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em</title>
+    <style>
+        html {
+            font-size: 30px;
+        }
+
+        p.em {
+            border: 10px solid gold;
+            font-size: 20px;
+            padding: 2em;
+            background-color: coral;
+        }
+
+        p.em1 {
+            padding: 3em;
+            background-color: lightgreen;
+        }
+
+        div.adam {
+            border: 1px solid black;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>em</h1>
+    <p>Relative to the font-size of the element (2em means 2 times the size of the current font)</p>
+    <p class="em">em is one time of the current font by default it is 16px</p>
+
+    <div class="adam">
+        some dummy text
+        <p class="em1">
+            I am inside a div
+        </p>
+    </div>
+</body>
+
+</html>
