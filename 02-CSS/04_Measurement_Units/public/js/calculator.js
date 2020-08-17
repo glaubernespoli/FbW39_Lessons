@@ -13,13 +13,63 @@ function vw(v) {
 
 /**
  * Adds .active class to the button when clicked, and removes from previous .active one.
+ * @param {object} button the button element
  */
-$('div.unit-wrapper button').click((e) => {
+function setCurrentActiveUnit(button) {
     const active = $('div.unit-wrapper').find('.active');
     if (active.length > 0) {
         $(active[0]).removeClass('active');
     }
-    $(e.target).addClass('active');
+    $(button).addClass('active');
+}
+
+/**
+ * Updates the unit-info container with the new information.
+ * @param {object} button the button element
+ */
+function updateInfoDisplay(button) {
+    const currentUnitLabel = $(button).data('unit');
+    console.log($('.unit-info-wrapper'));
+    $('.unit-info-wrapper').replaceWith(buildInfoDisplayFor(currentUnitLabel));
+}
+
+/**
+ * Builds the informational HTML for the selected unit.
+ * @param {string} currentUnitLabel the selected unit
+ */
+function buildInfoDisplayFor(currentUnitLabel) {
+    const currentUnit = units[currentUnitLabel];
+    const conversions = currentUnit.conversion;
+
+    let info = `<div class="unit-info-wrapper">
+    <div class="unit-info">`;
+    info += `<h4>${currentUnit.name} (<label class="${currentUnitLabel}">${currentUnitLabel}</label>)</h4><ul>`;
+    for (let key in conversions) {
+        info += `<li>1 <label class="${currentUnitLabel}">${currentUnitLabel}</label> = ${conversions[key]} <label class="${key}">${key}</label></li>`;
+    }
+    info += '</ul></div></div>';
+
+    return info;
+}
+
+/**
+ * Updates the content area for the selected unit element.
+ * @param {object} button the button element
+ */
+function updateSelectedContent(button) {
+    $('.selected-wrapper').fadeOut(300, () => {
+        updateInfoDisplay(button);
+    }).fadeIn(300);
+}
+
+/**
+ * Actions to be done once the unit button is clicked.
+ */
+$('div.unit-wrapper button').click((e) => {
+    const button = e.target;
+    setCurrentActiveUnit(button);
+    updateSelectedContent(button);
+
 
     // const unit = $($('div.unit-wrapper').find('.active')[0]).data('unit');
     // console.log(units[unit]);
@@ -28,3 +78,7 @@ $('div.unit-wrapper button').click((e) => {
 $().ready(() => {
     console.log(units);
 });
+
+
+
+// $('.outer_box').height($('.inner_box').outerHeight());
