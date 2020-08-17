@@ -35,8 +35,29 @@
                     </ul> -->
                 </div>
             </div>
-            <div class="unit-range">b</div>
-            <div class="unit-display">c</div>
+            <div class="unit-range-wrapper">
+                <div class="unit-range">
+                    <input type="range" name="unit-range" id="unit-range">
+                </div>
+                <div class="unit-range-values-wrapper">
+                    <div class="unit-range-min">
+                        <label for="unit-range-min">MIN</label>
+                        <input type="text" name="unit-range-min" id="unit-range-min">
+                    </div>
+
+                    <div class="unit-range-current">
+                        <label for="unit-range-current">CURRENT</label>
+                        <input type="text" name="unit-range-current" id="unit-range-current">
+                    </div>
+
+                    <div class="unit-range-max">
+                        <label for="unit-range-max">MAX</label>
+                        <input type="text" name="unit-range-max" id="unit-range-max">
+                    </div>
+                </div>
+
+            </div>
+            <div class="unit-display"></div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
