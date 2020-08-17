@@ -131,17 +131,16 @@ div.pc {
 
 div.selected-wrapper div.unit-info-wrapper {
     position: relative;
-    height: 18em;
+    height: 12em;
 }
 
 div.selected-wrapper div.unit-info-wrapper div.unit-info {
     font-weight: bold;
     border: 3px solid var(--font-color-o);
     border-radius: 5px;
-    height: initial;
+    height: 11em;
     position: absolute;
     left: 50%;
-    top: 10%;
     transform: translate(-50%);
     padding: 0 2rem;
     text-align: center;
