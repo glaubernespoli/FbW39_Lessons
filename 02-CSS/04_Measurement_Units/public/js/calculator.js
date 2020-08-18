@@ -137,19 +137,38 @@ function rangeInputFocusOutEvent(e) {
 }
 
 function updateSpanAndRangeValuesFor(inputElement) {
-    switch (inputElement.id) {
-        case 'unit-range-min':
-            updateSpanAndRangeValues(inputElement.id, 'min');
-            break;
-        case 'unit-range-current':
-            updateSpanAndRangeValues(inputElement.id, 'value');
-            break;
-        case 'unit-range-max':
-            updateSpanAndRangeValues(inputElement.id, 'max');
-            break;
+    const minInput = $('#unit-range-min');
+    const currentInput = $('#unit-range-current');
+    const maxInput = $('#unit-range-max');
 
+    const val = $(inputElement).val();
+    switch (inputElement.id) {
+        case minInput[0].id:
+            if (val >= 0 && val <= currentInput.val()) {
+                updateSpanAndRangeValues(inputElement.id, 'min');
+            }
+            break;
+        case currentInput[0].id:
+            if (val >= minInput.val() && val <= maxInput.val()) {
+                updateSpanAndRangeValues(inputElement.id, 'value');
+            }
+            break;
+        case maxInput[0].id:
+            if (val >= currentInput.val()) {
+                updateSpanAndRangeValues(inputElement.id, 'max');
+            }
+            break;
         default:
             break;
+    }
+    revertInputValueIfSpanNotUpdated(inputElement);
+}
+
+function revertInputValueIfSpanNotUpdated(inputElement) {
+    const span = $(inputElement).parent().children('span');
+    const self = $(inputElement);
+    if (self.val() != span.text()) {
+        self.val(span.text());
     }
 }
 
@@ -172,11 +191,17 @@ function updateSpanAndRangeValues(inputID, attr) {
  * //TODO:
  * 9. auto select values on the inputs when they get focused --OK
  * 2. only numbers on inputs, no negative numbers; -- OK
+ * 3. min <= current <= max; --OK
+ * 11. if not updating values (due to not being elegible), keep old value --OK
+ * 
+ * 12. set max of min input = current, set min of max input = current
+ * 
+ * 
  * 1. initial values of the spans (not X Y Z);
- * 3. min <= current <= max;
  * 4. update current value on slide;
  * 5. not trigger change event when using the buttons up and down from the number input ==>>> FOCUS & ENTER should trigger all the events; change & keyup numbers should only update values
  * 6. range silde bar should have the specified color
  * 7. growth input on top of the range bar to specify how much it should grow (step attr)
  * 8. initial min and max should be based on parent div, not vw
+ * 10. smoothly change the bg on :hover on the unit buttons
  */
