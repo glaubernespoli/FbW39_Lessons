@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Box Model</title>
+  </head>
+
+  <body>
+    <h1>The CSS Box Model</h1>
+    <p>
+      The CSS box model is essentially a box that wraps around every HTML
+      element. It consists of: margins, borders, padding, and the actual
+      content. The image below illustrates the box model:
+    </p>
+    <div class="margin box-model">
+      <h3 class="title">Margin</h3>
+      <div class="border box-model">
+        <h3 class="title">Border</h3>
+        <div class="padding box-model">
+          <h3 class="title">Padding</h3>
+          <div class="content box-model">
+            <h3 class="title">Content</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>Explanation of the different parts:</p>
+    <ul>
+      <li>
+        <h3>Content:</h3>
+        <p>
+          The content of the box, where text and images appear
+        </p>
+      </li>
+      <li>
+        <h3>Padding:</h3>
+        <p>an empty area surrounds the content.</p>
+      </li>
+      <li>
+        <h3>Border:</h3>
+        <p>A boreder goes around the padding and the content</p>
+      </li>
+      <li>
+        <h3>Margin:</h3>
+        <p>an empty area surrounds the border, outside the element</p>
+      </li>
+    </ul>
+    <p>
+      The box model allows us to add a border around elements, and define space
+      between elements.
+    </p>
+    <div>
+      <h3>Example</h3>
+      <div class="example1">
+        <pre>
+        div.example1 {
+         width: 300px;
+         border: 25px solid green;
+         padding: 25px;
+         margin: 25px;
+            }
+                  
+            </pre
+        >
+      </div>
+    </div>
+    <hr />
+    <br />
+    <h1>Width and Height of an Element</h1>
+
+    <p>
+      In order to set the width and height of an element correctly in all
+      browsers, you need to know how the box model works.
+    </p>
+    <div class="important">
+      <p>
+        <strong>Important:</strong> When you set the width and height properties
+        of an element with CSS, you just set the width and height of the
+        <strong>content area</strong>. To calculate the full size of an element,
+        you must also add padding, borders and margins.
+      </p>
+    </div>
+    <p>
+      Assume we want to style a &lt;div&gt; element to have a total width of
+      350px:
+    </p>
+    <div>
+      <h3>Example</h3>
+      <div class="example2">
+        <pre>
+           div.example2 {
+             width: 320px;
+            padding: 10px;
+            border: 5px solid blue;
+            margin: 0;
+                  } 
+            </pre
+        >
+      </div>
+    </div>
+    <p>Here is the math:</p>
+    <div class="math">
+      <pre>
+        320px (width)
+        + 20px (left + right padding)
+        + 10px (left + right border)
+        + 0px (left + right margin)
+        = <strong>350px</strong>
+      </pre>
+    </div>
+    <div>
+      <h3>Example for box-sizing Property</h3>
+      <div class="example3">
+        <pre>
+        div.example3 {
+         width: 300px;
+         height: 200px;
+         border: 5px solid purple;
+         padding: 20px;
+         box-sizing: border-box;
+              }
+              </pre
+        >
+      </div>
+      <div class="example4">
+        <pre>
+        div.example3 {
+         width: 300px;
+         height: 200px;
+         border: 1px solid white;
+         box-sizing: border-box;
+              }
+              </pre
+        >
+      </div>
+    </div>
+
+    <!-- Trial cases -->
+    <div class="trial-1">
+      Container
+      <div class="trial-2">
+        inside the container
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+body {
+    font-family: arial, helvetica, sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid purple;
+}
+
+/* agregamos el nav por si en nuestro código llegamos a tener otras listas, no las afecte*/
+
+nav li {
+    border: 0px solid blue;
+    border-radius: 3px;
+    width: 10rem;
+    text-align: center;
+    background-color: pink;
+    margin-bottom: 1rem;
+    display: inline-block;
+    /* Con esta propiedad hacemos que nuestra barra se haga de forma horizontal, la propiedad de inline block se ocupa mucho en las barras de navegaciones */
+    margin-right: 1.5rem;
+}
+
+nav a {
+    border: 3px solid white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: purple;
+    text-decoration: none;
+    padding: 1vw;
+    display: block;
+    /*Colocamos este atributo para convertir este elemento en bloque y nos permita crecer el area clickeable(? abarcando así todo el botón, sino el borde solo será del tamaño del contenido, en este caso solo del texto */
+}
+
+nav a:hover {
+    color: white;
+    background-color: purple;
+}

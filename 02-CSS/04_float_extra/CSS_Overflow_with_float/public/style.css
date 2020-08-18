@@ -1,0 +1,23 @@
+img {
+  width: 200px;
+  float: left;
+  margin-right: 1.5%;
+}
+
+.container {
+  height: 200px;
+  /* width: 100px; */
+
+  border: 1px solid black;
+  /* If overflow: auto; scroll-bar should be added to see  the rest of the content */
+  overflow: auto;
+  /* If overflow: hidden; the rest of the content will be hidden*/
+  overflow: hidden;
+  /* If overflow:visible; the content will appear outside the container, This is default */
+
+  overflow: visible;
+
+  /* If overflow: scroll; scroll-bar should be added to see  the rest of the content and unrequired scroll-bar will be added as well*/
+  overflow: scroll;
+
+}

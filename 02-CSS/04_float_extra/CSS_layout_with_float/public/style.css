@@ -1,0 +1,35 @@
+code {
+  color: #fff;
+
+  /*
+  font-size:14px;
+  line-height:24px;
+  */
+  font: 14px/24px "Source Code Pro", "Courier New";
+}
+
+header,
+section,
+aside,
+footer {
+  background-color: #2db34a;
+  padding: 24px 15px;
+  text-align: center;
+  border-radius: 6px;
+  margin: 0 1.5% 24px 1.5%;
+}
+
+section {
+  float: left;
+  width: 60%;
+}
+aside {
+  float: right;
+  width: 27%;
+}
+.clr {
+  clear: both;
+}
+footer {
+  clear: both;
+}
