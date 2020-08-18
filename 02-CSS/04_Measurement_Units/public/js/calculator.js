@@ -151,6 +151,7 @@ function updateSpanAndRangeValuesFor(inputElement) {
         case currentInput[0].id:
             if (val >= minInput.val() && val <= maxInput.val()) {
                 updateSpanAndRangeValues(inputElement.id, 'value');
+                updateMaxOfMinAndMinOfMax(val);
             }
             break;
         case maxInput[0].id:
@@ -162,6 +163,11 @@ function updateSpanAndRangeValuesFor(inputElement) {
             break;
     }
     revertInputValueIfSpanNotUpdated(inputElement);
+}
+
+function updateMaxOfMinAndMinOfMax(val) {
+    $('#unit-range-min').attr('max', val);
+    $('#unit-range-max').attr('min', val);
 }
 
 function revertInputValueIfSpanNotUpdated(inputElement) {
@@ -193,8 +199,8 @@ function updateSpanAndRangeValues(inputID, attr) {
  * 2. only numbers on inputs, no negative numbers; -- OK
  * 3. min <= current <= max; --OK
  * 11. if not updating values (due to not being elegible), keep old value --OK
+ * 12. set max of min input = current, set min of max input = current --OK
  * 
- * 12. set max of min input = current, set min of max input = current
  * 
  * 
  * 1. initial values of the spans (not X Y Z);
