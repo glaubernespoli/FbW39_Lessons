@@ -13,12 +13,12 @@
         <h1>Measurement Units</h1>
         <h2>Absolute Units</h2>
         <div class="unit-wrapper">
-            <button class="btn-cm" data-unit="cm">Centimeter (cm)</button>
-            <button class="btn-mm" data-unit="mm">Milimeter (mm)</button>
-            <button class="btn-in" data-unit="in">Inches (in)</button>
-            <button class="btn-px" data-unit="px">Pixels (px)</button>
-            <button class="btn-pt" data-unit="pt">Points (pt)</button>
-            <button class="btn-pc" data-unit="pc">Pica (pc)</button>
+            <button class="btn-cm clickable" data-unit="cm">Centimeter (cm)</button>
+            <button class="btn-mm clickable" data-unit="mm">Milimeter (mm)</button>
+            <button class="btn-in clickable" data-unit="in">Inches (in)</button>
+            <button class="btn-px clickable" data-unit="px">Pixels (px)</button>
+            <button class="btn-pt clickable" data-unit="pt">Points (pt)</button>
+            <button class="btn-pc clickable" data-unit="pc">Pica (pc)</button>
         </div>
         <div class="selected-wrapper block-none">
             <div class="unit-info-wrapper">
@@ -40,19 +40,19 @@
                     <input type="range" name="unit-range" id="unit-range">
                 </div>
                 <div class="unit-range-values-wrapper">
-                    <div class="unit-range-min unit-range-box">
+                    <div class="unit-range-min unit-range-box clickable">
                         <label for="unit-range-min">MIN</label>
                         <span>X</span>
                         <input type="text" name="unit-range-min" id="unit-range-min" hidden>
                     </div>
 
-                    <div class="unit-range-current unit-range-box">
+                    <div class="unit-range-current unit-range-box clickable">
                         <label for="unit-range-current">CURRENT</label>
                         <span>Y</span>
                         <input type="text" name="unit-range-current" id="unit-range-current" hidden>
                     </div>
 
-                    <div class="unit-range-max unit-range-box">
+                    <div class="unit-range-max unit-range-box clickable">
                         <label for="unit-range-max">MAX</label>
                         <span>Z</span>
                         <input type="text" name="unit-range-max" id="unit-range-max" hidden>
