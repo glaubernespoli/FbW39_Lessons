@@ -94,7 +94,7 @@ $('div.unit-wrapper button').click((e) => {
 /**
  * Initially setting the click event to the range box.
  */
-$('div.unit-range-box').click(e => rangeBoxClickEvent(e.target));
+$('div.unit-range-box').click(e => rangeBoxClickEvent(e));
 
 /**
  * initially setting the focusout and keyup event to the range inputs
@@ -105,20 +105,73 @@ $('div.unit-range-box input').on('focusout keyup', e => rangeInputFocusOutEvent(
  * Actions to be done once one of the div is clicked. 
  * It should hide the span, fade in the input, focus it, disable the self event and enable the input event.
  */
-function rangeBoxClickEvent(rangeBox) {
+function rangeBoxClickEvent(e) {
+    const rangeBox = e.target;
     $(rangeBox).children('span').hide();
     $(rangeBox).children('input').fadeIn(300).focus();
     $(rangeBox).removeClass('clickable').off('click');
     $(rangeBox).children('input').on('focusout keyup', e => rangeInputFocusOutEvent(e));
 }
 
+/**
+ * Actions to be done once one of the input loses focus or the enter key is pressed. 
+ * It should hide the input, fade in the span, reenable the click event on the wrapper and disable self.
+ * Should also update the values for the span and for the range input.
+ */
 function rangeInputFocusOutEvent(e) {
+    //ignores any key other than enter key
     if (e.type == 'keyup' && e.keyCode != 13) {
         return;
     }
-    const parentDiv = $(e.target).parent();
-    $(parentDiv).children('input').hide();
+
+    const inputElement = e.target;
+    const parentDiv = $(inputElement).parent();
+    $(inputElement).hide();
     $(parentDiv).children('span').fadeIn(300);
-    $(parentDiv).addClass('clickable').click(e => rangeBoxClickEvent(e.target));
-    $(e.target).off('focusout keyup');
+    $(parentDiv).addClass('clickable').click((e) => rangeBoxClickEvent(e));
+    $(inputElement).off('focusout keyup');
+
+    updateSpanAndRangeValuesFor(inputElement);
+
+    e.stopImmediatePropagation();
 }
+
+function updateSpanAndRangeValuesFor(inputElement) {
+    switch (inputElement.id) {
+        case 'unit-range-min':
+            updateSpanAndRangeValues(inputElement.id, 'min');
+            break;
+        case 'unit-range-current':
+            updateSpanAndRangeValues(inputElement.id, 'value');
+            break;
+        case 'unit-range-max':
+            updateSpanAndRangeValues(inputElement.id, 'max');
+            break;
+
+        default:
+            break;
+    }
+}
+
+function updateSpanAndRangeValues(inputID, attr) {
+    const input = $(`#${inputID}`);
+    const span = $(input).parent().children('span');
+    const rangeInput = $('#unit-range');
+    const val = input.val();
+
+    span.text(val);
+    if (attr == 'value') {
+        rangeInput.val(val);
+    } else {
+        rangeInput.attr(attr, val);
+    }
+}
+
+
+/**
+ * //TODO:
+ * 1. initial values of the spans (not X Y Z);
+ * 2. only numbers on inputs, no negative numbers;
+ * 3. min <= current <= max;
+ * 4. update current value on slide;
+ */
