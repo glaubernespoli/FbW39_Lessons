@@ -108,7 +108,7 @@ $('div.unit-range-box input').on('focusout keyup', e => rangeInputFocusOutEvent(
 function rangeBoxClickEvent(e) {
     const rangeBox = e.target;
     $(rangeBox).children('span').hide();
-    $(rangeBox).children('input').fadeIn(300).focus();
+    $(rangeBox).children('input').fadeIn(300).select();
     $(rangeBox).removeClass('clickable').off('click');
     $(rangeBox).children('input').on('focusout keyup', e => rangeInputFocusOutEvent(e));
 }
@@ -170,8 +170,13 @@ function updateSpanAndRangeValues(inputID, attr) {
 
 /**
  * //TODO:
+ * 9. auto select values on the inputs when they get focused --OK
+ * 2. only numbers on inputs, no negative numbers; -- OK
  * 1. initial values of the spans (not X Y Z);
- * 2. only numbers on inputs, no negative numbers;
  * 3. min <= current <= max;
  * 4. update current value on slide;
+ * 5. not trigger change event when using the buttons up and down from the number input ==>>> FOCUS & ENTER should trigger all the events; change & keyup numbers should only update values
+ * 6. range silde bar should have the specified color
+ * 7. growth input on top of the range bar to specify how much it should grow (step attr)
+ * 8. initial min and max should be based on parent div, not vw
  */
