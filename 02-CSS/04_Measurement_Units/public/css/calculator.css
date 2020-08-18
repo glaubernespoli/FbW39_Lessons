@@ -28,6 +28,7 @@ body {
     background-color: var(--bg-color);
     color: var(--font-color);
     height: 80vh;
+    font-family: 'Josefin Sans', sans-serif;
     /* background-color: rgba(163, 155, 155, 0.877);
     color: rgba(32, 32, 34, 0.534); */
 }
@@ -132,18 +133,14 @@ div.pc {
 }
 
 div.selected-wrapper div.unit-info-wrapper {
-    position: relative;
-    height: 12em;
+    display: flex;
+    justify-content: center;
 }
 
 div.selected-wrapper div.unit-info-wrapper div.unit-info {
     font-weight: bold;
     border: 3px solid var(--font-color-o);
     border-radius: 5px;
-    height: 11em;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
     padding: 0 2rem;
     text-align: center;
     transition: border ease-in-out .3s;
@@ -189,6 +186,42 @@ label.pc {
 
 div.unit-range-wrapper {
     text-align: center;
+}
+
+div.selected-wrapper>div,
+div.unit-range-wrapper>div {
+    margin: 1em;
+}
+
+div.unit-range-values-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.unit-range-box {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid var(--font-color-o);
+    border-radius: 5px;
+    width: 5vw;
+    height: 2rem;
+}
+
+div.unit-range-box>* {
+    pointer-events: none;
+}
+
+div.unit-range-box>label {
+    text-align: left;
+    font-size: x-small;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+div.unit-range-box>span {
+    font-size: medium;
+    font-weight: bold;
 }
 
 

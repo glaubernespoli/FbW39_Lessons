@@ -65,20 +65,28 @@ function updateSelectedContent(button) {
 /**
  * Actions to be done once the unit button is clicked.
  */
-$('div.unit-wrapper button').click((e) => {
+$('div.unit-wrapper button').click(e => {
     const button = e.target;
     setCurrentActiveUnit(button);
     updateSelectedContent(button);
-
-
-    // const unit = $($('div.unit-wrapper').find('.active')[0]).data('unit');
-    // console.log(units[unit]);
 });
 
-$().ready(() => {
-    console.log(units);
+/**
+ * Actions to be done once one of the unit range buttons is clicked.
+ */
+$('div.unit-range-box').click(e => {
+    const rangeElement = e.target;
+    console.log(rangeElement);
+    $(rangeElement).children('span').hide();
+    $(rangeElement).children('input').fadeIn(300).focus();
 });
 
-
-
-// $('.outer_box').height($('.inner_box').outerHeight());
+/**
+ * Actions to be done once one of the unit range inputs loses focus.
+ */
+$('div.unit-range-box input').focusout(e => {
+    const inputElement = e.target;
+    const parentDiv = $(inputElement).parent();
+    $(inputElement).hide();
+    $(parentDiv).children('span').fadeIn(300);
+});
