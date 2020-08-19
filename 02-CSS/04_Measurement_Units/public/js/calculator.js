@@ -86,8 +86,8 @@ function updateRangeValues(currentUnitLabel) {
 
 function updateRangeDisplayLabelsWhenSelectingUnit() {
     updateSpanAndRangeValuesFor($('#unit-range-min'));
-    updateSpanAndRangeValuesFor($('#unit-range-current'));
     updateSpanAndRangeValuesFor($('#unit-range-max'));
+    updateSpanAndRangeValuesFor($('#unit-range-current'));
 }
 
 /**
@@ -149,10 +149,10 @@ function updateSpanAndRangeValuesFor(inputElement) {
     const currentInput = $('#unit-range-current');
     const maxInput = $('#unit-range-max');
 
-    const val = getInt(inputElement.val());
-    const minVal = getInt(minInput.val());
-    const currentVal = getInt(currentInput.val());
-    const maxVal = getInt(maxInput.val());
+    const val = getNumber(inputElement.val());
+    const minVal = getNumber(minInput.val());
+    const currentVal = getNumber(currentInput.val());
+    const maxVal = getNumber(maxInput.val());
     switch (inputElement.attr('id')) {
         case minInput.attr('id'):
             if (val >= 0 && val <= currentVal) {
@@ -161,8 +161,8 @@ function updateSpanAndRangeValuesFor(inputElement) {
             break;
         case currentInput.attr('id'):
             if (val >= minVal && val <= maxVal) {
-                updateSpanAndRangeValues(currentInput, 'value');
                 updateMaxOfMinAndMinOfMax(val);
+                updateSpanAndRangeValues(currentInput, 'value');
             }
             break;
         case maxInput.attr('id'):
@@ -176,8 +176,8 @@ function updateSpanAndRangeValuesFor(inputElement) {
     revertInputValueIfSpanNotUpdated(inputElement);
 }
 
-function getInt(strVal) {
-    return parseInt(strVal);
+function getNumber(strVal) {
+    return Math.round((parseFloat(strVal) + Number.EPSILON) * 100) / 100;
 }
 
 function updateMaxOfMinAndMinOfMax(val) {
@@ -195,7 +195,7 @@ function revertInputValueIfSpanNotUpdated(inputElement) {
 function updateSpanAndRangeValues(input, attr) {
     const span = input.parent().children('span');
     const rangeInput = $('#unit-range');
-    const val = input.val();
+    const val = getNumber(input.val());
 
     span.text(val);
     if (attr == 'value') {
@@ -215,12 +215,12 @@ function updateSpanAndRangeValues(input, attr) {
  * 12. set max of min input = current, set min of max input = current --OK
  * 1. initial values of the spans (not X Y Z); --OK
  * 
- * 
- * 
  * 4. update current value on slide;
+ * 
+ * 
  * 5. not trigger change event when using the buttons up and down from the number input ==>>> FOCUS & ENTER should trigger all the events; change & keyup numbers should only update values
  * 6. range silde bar should have the specified color
  * 7. growth input on top of the range bar to specify how much it should grow (step attr)
- * 8. initial min and max should be based on parent div, not vw
+ * 8. initial min and max should be based on parent div, not vw (also work with .2 decimals instead of ints when calculating min current and max)
  * 10. smoothly change the bg on :hover on the unit buttons
  */
