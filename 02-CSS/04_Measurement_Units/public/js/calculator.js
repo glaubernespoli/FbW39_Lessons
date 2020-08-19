@@ -109,16 +109,23 @@ $('div.unit-range-box').click(e => rangeBoxClickEvent(e));
  */
 $('div.unit-range-box input').on('focusout keyup', e => rangeInputFocusOutEvent(e));
 
+$('#unit-range').on('input', e => updateCurrentInputValueWhenRangeSlides(e));
+
+function updateCurrentInputValueWhenRangeSlides(e) {
+    const current = $('#unit-range-current');
+    current.val($(e.target).val());
+    updateSpanAndRangeValuesFor(current);
+}
 /**
  * Actions to be done once one of the div is clicked. 
  * It should hide the span, fade in the input, focus it, disable the self event and enable the input event.
  */
 function rangeBoxClickEvent(e) {
-    const rangeBox = e.target;
-    $(rangeBox).children('span').hide();
-    $(rangeBox).children('input').fadeIn(300).select();
-    $(rangeBox).removeClass('clickable').off('click');
-    $(rangeBox).children('input').on('focusout keyup', e => rangeInputFocusOutEvent(e));
+    const rangeBox = $(e.target);
+    rangeBox.children('span').hide();
+    rangeBox.children('input').fadeIn(300).select();
+    rangeBox.removeClass('clickable').off('click');
+    rangeBox.children('input').on('focusout keyup', e => rangeInputFocusOutEvent(e));
 }
 
 /**
@@ -135,8 +142,8 @@ function rangeInputFocusOutEvent(e) {
     const inputElement = $(e.target);
     const parentDiv = inputElement.parent();
     inputElement.hide();
-    $(parentDiv).children('span').fadeIn(300);
-    $(parentDiv).addClass('clickable').click((e) => rangeBoxClickEvent(e));
+    parentDiv.children('span').fadeIn(300);
+    parentDiv.addClass('clickable').click((e) => rangeBoxClickEvent(e));
     inputElement.off('focusout keyup');
 
     updateSpanAndRangeValuesFor(inputElement);
@@ -214,8 +221,8 @@ function updateSpanAndRangeValues(input, attr) {
  * 11. if not updating values (due to not being elegible), keep old value --OK
  * 12. set max of min input = current, set min of max input = current --OK
  * 1. initial values of the spans (not X Y Z); --OK
+ * 4. update current value on slide; -- OK
  * 
- * 4. update current value on slide;
  * 
  * 
  * 5. not trigger change event when using the buttons up and down from the number input ==>>> FOCUS & ENTER should trigger all the events; change & keyup numbers should only update values
