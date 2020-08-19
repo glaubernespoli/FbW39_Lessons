@@ -71,6 +71,7 @@ div.unit-wrapper button {
     color: var(--font-color);
     padding: 0.9rem 1.8rem;
     line-height: 0;
+    transition: background-color ease-in-out 0.1s;
 }
 
 .clickable {
@@ -208,6 +209,11 @@ div.unit-range-box {
     border-radius: 5px;
     width: 5vw;
     height: 2.1rem;
+    transition: all ease-in-out 0.1s;
+}
+
+div.unit-range-box:hover {
+    background-color: rgb(20, 56, 75);
 }
 
 div.unit-range-box>label,
