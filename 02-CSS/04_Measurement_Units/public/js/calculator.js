@@ -70,6 +70,7 @@ function updateSelectedContent(button) {
         .fadeOut(300, () => {
             updateInfoDisplay(currentUnitLabel);
             updateRangeValues(currentUnitLabel);
+            updateRangeDisplayLabelsWhenSelectingUnit();
         })
         .fadeIn(300);
 }
@@ -82,6 +83,13 @@ function updateRangeValues(currentUnitLabel) {
     $('#unit-range-current').val(Math.round(maxWidth / 2));
     $('#unit-range-max').val(Math.round(maxWidth));
 }
+
+function updateRangeDisplayLabelsWhenSelectingUnit() {
+    updateSpanAndRangeValuesFor($('#unit-range-min'));
+    updateSpanAndRangeValuesFor($('#unit-range-current'));
+    updateSpanAndRangeValuesFor($('#unit-range-max'));
+}
+
 /**
  * Actions to be done once the unit button is clicked.
  */
@@ -124,12 +132,12 @@ function rangeInputFocusOutEvent(e) {
         return;
     }
 
-    const inputElement = e.target;
-    const parentDiv = $(inputElement).parent();
-    $(inputElement).hide();
+    const inputElement = $(e.target);
+    const parentDiv = inputElement.parent();
+    inputElement.hide();
     $(parentDiv).children('span').fadeIn(300);
     $(parentDiv).addClass('clickable').click((e) => rangeBoxClickEvent(e));
-    $(inputElement).off('focusout keyup');
+    inputElement.off('focusout keyup');
 
     updateSpanAndRangeValuesFor(inputElement);
 
@@ -141,22 +149,25 @@ function updateSpanAndRangeValuesFor(inputElement) {
     const currentInput = $('#unit-range-current');
     const maxInput = $('#unit-range-max');
 
-    const val = $(inputElement).val();
-    switch (inputElement.id) {
-        case minInput[0].id:
-            if (val >= 0 && val <= currentInput.val()) {
-                updateSpanAndRangeValues(inputElement.id, 'min');
+    const val = getInt(inputElement.val());
+    const minVal = getInt(minInput.val());
+    const currentVal = getInt(currentInput.val());
+    const maxVal = getInt(maxInput.val());
+    switch (inputElement.attr('id')) {
+        case minInput.attr('id'):
+            if (val >= 0 && val <= currentVal) {
+                updateSpanAndRangeValues(minInput, 'min');
             }
             break;
-        case currentInput[0].id:
-            if (val >= minInput.val() && val <= maxInput.val()) {
-                updateSpanAndRangeValues(inputElement.id, 'value');
+        case currentInput.attr('id'):
+            if (val >= minVal && val <= maxVal) {
+                updateSpanAndRangeValues(currentInput, 'value');
                 updateMaxOfMinAndMinOfMax(val);
             }
             break;
-        case maxInput[0].id:
-            if (val >= currentInput.val()) {
-                updateSpanAndRangeValues(inputElement.id, 'max');
+        case maxInput.attr('id'):
+            if (val >= currentVal) {
+                updateSpanAndRangeValues(maxInput, 'max');
             }
             break;
         default:
@@ -165,22 +176,24 @@ function updateSpanAndRangeValuesFor(inputElement) {
     revertInputValueIfSpanNotUpdated(inputElement);
 }
 
+function getInt(strVal) {
+    return parseInt(strVal);
+}
+
 function updateMaxOfMinAndMinOfMax(val) {
     $('#unit-range-min').attr('max', val);
     $('#unit-range-max').attr('min', val);
 }
 
 function revertInputValueIfSpanNotUpdated(inputElement) {
-    const span = $(inputElement).parent().children('span');
-    const self = $(inputElement);
-    if (self.val() != span.text()) {
-        self.val(span.text());
+    const span = inputElement.parent().children('span');
+    if (inputElement.val() != span.text()) {
+        inputElement.val(span.text());
     }
 }
 
-function updateSpanAndRangeValues(inputID, attr) {
-    const input = $(`#${inputID}`);
-    const span = $(input).parent().children('span');
+function updateSpanAndRangeValues(input, attr) {
+    const span = input.parent().children('span');
     const rangeInput = $('#unit-range');
     const val = input.val();
 
@@ -200,10 +213,10 @@ function updateSpanAndRangeValues(inputID, attr) {
  * 3. min <= current <= max; --OK
  * 11. if not updating values (due to not being elegible), keep old value --OK
  * 12. set max of min input = current, set min of max input = current --OK
+ * 1. initial values of the spans (not X Y Z); --OK
  * 
  * 
  * 
- * 1. initial values of the spans (not X Y Z);
  * 4. update current value on slide;
  * 5. not trigger change event when using the buttons up and down from the number input ==>>> FOCUS & ENTER should trigger all the events; change & keyup numbers should only update values
  * 6. range silde bar should have the specified color
