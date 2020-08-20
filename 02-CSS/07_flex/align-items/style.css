@@ -1,0 +1,91 @@
+body {
+  background-color: rgb(125, 195, 228);
+}
+main {
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+  background-color: rgb(58, 54, 54);
+  padding: 10px 20px;
+  color: #fff;
+}
+h1,
+h2 {
+  text-align: center;
+}
+span {
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.flex-container {
+  background-color: #40f069;
+  padding: 10px 0px;
+  display: flex;
+  height: 200px;
+  margin: 15px 0px;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+.align-items-start {
+  align-items: flex-start;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.align-items-baseline {
+  align-items: baseline;
+}
+
+.flex-item {
+  line-height: 30px;
+  background-color: rgb(31, 29, 29);
+  color: white;
+  margin: 5px 5px;
+  text-align: center;
+}
+.height {
+  height: 30px;
+}
+
+.width {
+  width: 30px;
+}
+
+.a {
+  width: 50px;
+  font-size: 2rem;
+  height: 60px;
+  margin: 8% 1px;
+}
+.b {
+  width: 50px;
+  font-size: 1.5rem;
+  height: 60px;
+  margin: 9% 0.5px;
+}
+.c {
+  width: 50px;
+  font-size: 3rem;
+  height: 60px;
+  margin: 7% 0.5px;
+}
+.d {
+  width: 50px;
+  font-size: 5rem;
+  height: 90px;
+  margin: 2% 0.5px;
+}
