@@ -1,0 +1,31 @@
+div.calendar {
+    width: 100%;
+}
+
+div.calendar-header {
+    background-color: turquoise;
+    color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+    padding: 50px 10px;
+}
+
+div.calendar-header-left,
+div.calendar-header-right {
+    cursor: pointer;
+    position: relative;
+    bottom: 50%;
+}
+
+div.calendar-header-main {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+table.date-picker {
+    width: 100%;
+    text-align: center;
+}

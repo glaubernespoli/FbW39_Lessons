@@ -1,0 +1,26 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+dt {
+	background-color: #c2bebe;
+	color: white;
+	border-top: 1px solid #a09c9c;
+	border-bottom: 1px solid #a09c9c;
+	padding-left: 15px;
+	position: sticky;
+	top: 5px;
+}
+
+dd {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	margin-left: inherit;
+	border-bottom: 1px solid rgba(83, 80, 80, 0.3);
+}
+
+dd:last-child {
+	border-bottom: none;
+}

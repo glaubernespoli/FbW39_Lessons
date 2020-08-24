@@ -1,0 +1,35 @@
+.header {
+    width: 800px;
+    height: 150px;
+    position: relative;
+    top: 20px;
+    left: 15px;
+}
+
+div {
+    border: 2px solid black;
+}
+
+.logo {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 350px;
+    height: 70px;
+}
+
+.top-nav {
+    position: absolute;
+    top: 5px;
+    height: 30px;
+    width: 275px;
+    left: 515px;
+}
+
+.menu {
+    position: absolute;
+    height: 30px;
+    width: 500px;
+    left: 290px;
+    top: 110px;
+}
