@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto-fit/minmax</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(4, minmax(300px, 1fr));
+        }
+
+        .grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        }
+
+        .item {
+            padding: 3rem;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>auto-fit/minmax</h1>
+    <div class="grid">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+
+    </div>
+    <br>
+    <hr>
+    <h1>minmax without auto-fit</h1>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+</body>
+
+</html>

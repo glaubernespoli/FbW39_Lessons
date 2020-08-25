@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Columns</title>
+    <style>
+      h1 {
+        font-size: xx-large;
+        text-align: center;
+      }
+      .grid {
+        display: grid;
+        /* grid-template-columns: 200px 200px 200px; */
+        /* grid-template-columns: auto auto auto; */
+        /* grid-template-columns: 1fr 2fr 3fr; */
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-gap:MDN says it's deprecated */
+        /* We can use just gap */
+        gap: 1rem;
+      }
+      .item {
+        padding: 3rem;
+        background-color: #f4f4f4;
+        border: 1px solid #ccc;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Grid Columns</h1>
+    <div class="grid">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+      <!-- <div class="item">Item 7</div>
+        <div class="item">Item 6</div> -->
+    </div>
+    <main>
+      <section>
+        <h3>Welcome To My Website</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
+          dolorum, illo libero odio molestias culpa alias ipsam porro
+          exercitationem dignissimos unde iste atque deserunt in? Nesciunt
+          voluptatibus sit quod aperiam. Consequatur error praesentium alias
+          dicta, aut aperiam eos aliquam, sapiente quae voluptatem distinctio
+          quo totam. Voluptas rem obcaecati, eum magni quaerat veritatis
+          consequuntur molestias inventore labore laboriosam ut velit. Cumque?
+          Neque dolore quidem rem cupiditate quibusdam eveniet iste voluptatibus
+          suscipit animi. Numquam perferendis placeat facilis aspernatur tempore
+          laudantium, sed laborum, praesentium eveniet vel commodi quasi earum,
+          culpa modi quis aperiam./p>
+        </p>
+      </section>
+
+      <aside>
+        <h3>Contact us:</h3>
+        <ul>
+          <li>Some Company</li>
+          <li>Some address</li>
+          <li>Some email</li>
+        </ul>
+      </aside>
+    </main>
+  </body>
+</html>

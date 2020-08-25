@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid</title>
+  <style>
+    div.container>ol li a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    div.container {
+      display: grid;
+      grid-template-areas:
+        'h1'
+        'ol';
+      border: 3px dashed green;
+      padding: 15px;
+      background-color: rgb(47, 255, 255);
+    }
+
+    div.container>h1 {
+      text-align: center;
+    }
+
+    .container>ol>li {
+      font-size: 20px;
+    }
+
+    h1 {
+      grid-area: h1;
+    }
+
+    ol {
+      grid-area: ol;
+      justify-self: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Grid Layout</h1>
+    <ol>
+      <li><a href="grid_columns.html">Grid Columns</a></li>
+      <li><a href="grid_rows.html">Grid Rows</a></li>
+      <li><a href="grid_span.html">Grid Span</a></li>
+      <li><a href="autofill_minmax.html">Autofill/minmax</a></li>
+      <li><a href="grid_template_area.html">Template Area</a></li>
+    </ol>
+  </div>
+</body>
+
+</html>
