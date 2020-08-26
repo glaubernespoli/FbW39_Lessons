@@ -1,0 +1,35 @@
+.header {
+	text-align: center;
+}
+
+.wrapper-container {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.change {
+	color: #fff;
+	background-color: #e94c5c;
+	border-radius: 15px;
+	cursor: pointer;
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
+	padding: 0.375rem 1.5rem;
+	font-weight: 400;
+	border: none;
+	outline: none;
+}
+
+.content {
+	background-color: rgb(231, 220, 220);
+	border-radius: 10px;
+	margin: 0.7em;
+	padding-left: 1em;
+	padding-right: 2em;
+	width: 10em;
+	height: 8em;
+}
+
+.content p {
+	color: rgb(56, 58, 59);
+}

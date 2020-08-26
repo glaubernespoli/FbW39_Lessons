@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Layout - Exercise 1</title>
+    <style>
+        .wrapper {
+            display: grid;
+            border: 1px solid rgba(0, 0, 0, 0.205);
+            margin: 2% 25vw;
+            padding: 10px;
+            gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr)
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .image1 {
+            grid-column: 3;
+            grid-row: 4;
+        }
+
+        .image2 {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .image3 {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        .image4 {
+            grid-column: 4;
+            grid-row: 1;
+        }
+
+        .content {}
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="wrapper">
+            <div class="image1 content"><img src="http://labs.jensimmons.com/2017/media/01-001/380485.jpg" alt=""></div>
+            <div class="image2 content"><img
+                    src="http://labs.jensimmons.com/2017/media/01-001/brooklynmuseum-o4266i000-86.226.18_SL1.jpg"
+                    alt="">
+            </div>
+            <div class="image3 content"><img
+                    src="http://labs.jensimmons.com/2017/media/01-001/brooklynmuseum-o44489i000-35.867_reference_SL1.jpg"
+                    alt=""></div>
+            <div class="image4 content"><img src="http://labs.jensimmons.com/2017/media/01-001/436667.jpg" alt=""></div>
+        </div>
+    </div>
+</body>
+
+</html>
