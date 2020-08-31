@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Script Element</title>
+    <style>
+      /* CSS Comment */
+
+      /* h3 {
+             color: red;
+           }
+           h3 + h3 {
+             color: rgb(0, 60, 255);
+           }
+           #id3 {
+             color: rgb(87, 6, 83);
+           }
+           button {
+             margin-top: 5px;
+           } */
+      h1,
+      h2 {
+        text-align: center;
+      }
+      header {
+        margin: 5px auto;
+        max-width: 300px;
+        color: red;
+        background-color: lightblue;
+        height: 5rem;
+        box-shadow: 0px 1px 8px;
+      }
+      header > h3 {
+        text-align: center;
+        padding: 10px;
+        font-size: 3rem;
+      }
+      div.main {
+        margin: auto;
+        max-width: 300px;
+        box-shadow: 0px 2px 10px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        row-gap: 1rem;
+        column-gap: 0.5rem;
+        grid-template-areas:
+          "input1 input2"
+          "btn1 btn2"
+          "btn3 btn4";
+      }
+      div.main > input {
+        margin: 10px auto;
+        background-color: rgb(221, 222, 135);
+        border-radius: 50%;
+        box-shadow: 0px 1px 5px;
+        color: rgb(31, 95, 31);
+        width: 6rem;
+        height: 3rem;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+      input#firstNumber {
+        grid-area: input1;
+      }
+
+      input#secondNumber {
+        grid-area: input2;
+      }
+
+      button.btn1 {
+        grid-area: btn1;
+      }
+
+      button.btn2 {
+        grid-area: btn2;
+      }
+
+      button.btn3 {
+        grid-area: btn3;
+      }
+
+      button.btn4 {
+        grid-area: btn4;
+      }
+      button.btn1,
+      button.btn2,
+      button.btn3,
+      button.btn4 {
+        margin: auto;
+        width: 6rem;
+        height: 6rem;
+        color: black;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      button.btn1:active,
+      button.btn2:active,
+      button.btn3:active,
+      button.btn4:active {
+        color: blue;
+        font-size: 1.43rem;
+        box-shadow: 0px 1px 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HTML Comment -->
+    <h1>JavaScript</h1>
+    <h2>Mini Calculator</h2>
+    <!-- <input type="text" name="inpt1" id="inpt1" placeholder="First Name" />
+    <input type="text" name="inpt2" id="inpt2" placeholder="Last Name" /> -->
+    <header>
+      <h3 id="result">0</h3>
+    </header>
+    <div class="main">
+      <input
+        type="text"
+        name="firstNumber"
+        id="firstNumber"
+        placeholder="Insert a Number"
+        value="0"
+      />
+      <input
+        type="text"
+        name="secondNumber"
+        id="secondNumber"
+        placeholder="Insert a Number"
+        value="0"
+      />
+      <br />
+
+      <button class="btn1" onclick="plus()">Plus</button>
+      <button class="btn2" onclick="minus()">Minus</button>
+      <button class="btn3" onclick="devide()">Devide</button>
+      <button class="btn4" onclick="multiply()">Multiply</button>
+    </div>
+    <!-- <button onclick="print()">Show me my name</button> -->
+    <!-- <h3 id="id1">Here you will see your name</h3>
+    <h3 id="id2">Here you will see your name</h3>
+    <h3 id="id3">Here you will see the result of adding both</h3> -->
+    <script>
+      //JS comment
+      /*This also works*/
+
+      //   let variableOne = 5;
+      //   console.log(variableOne);
+      //   const variableTwo = "constant";
+      //   console.log(variableTwo);
+      //   var variableThree = {
+      //     originalName: "FbW39",
+      //     nickName: ["A-team", "Bob Marley"],
+      //   };
+      //   console.log(variableThree);
+      //   variableOne = 10;
+      // console.log(variableOne);
+      /*print()  function to execute when click event fire on */
+      /*We call the print() function an Event Handler because it handles the vevnt click*/
+      //   function print() {
+      //     /*get the first input element by its id, and save its value within the variable firstName*/
+      //     const firstName = document.getElementById("inpt1").value;
+      //     /*get the second input element by its id, and save its value within the variable secondName*/
+      //     const secondName = document.getElementById("inpt2").value;
+      //     /*get the first h3 element by its id, and save it as an object within the variable display1*/
+      //     let display1 = document.getElementById("id1");
+      //     /*get the second h3 element by its id, and save it as an object within the variable display2*/
+      //     let display2 = document.getElementById("id2");
+      //     /*replacing the innerHTML of the first h3 (display1) by the value of the first input (firstName)*/
+      //     display1.innerHTML = firstName;
+      //     /*replacing the innerHTML of the second h3 (display2) by the value of the second input (secondName)*/
+      //     display2.innerHTML = secondName;
+
+      //     let display3 = document.getElementById("id3");
+      //     display3.innerHTML = parseInt(firstName) * parseInt(secondName);
+      //   }
+
+      function plus() {
+        /*inputs values*/
+        let x = parseInt(document.getElementById("firstNumber").value);
+        let y = parseInt(document.getElementById("secondNumber").value);
+        /*result element*/
+        let res = document.getElementById("result");
+        res.innerHTML = x + y;
+      }
+      function minus() {
+        /*inputs values*/
+        let x = parseInt(document.getElementById("firstNumber").value);
+        let y = parseInt(document.getElementById("secondNumber").value);
+        /*result element*/
+        let res = document.getElementById("result");
+        res.innerHTML = x - y;
+      }
+      function devide() {
+        /*inputs values*/
+        let x = parseInt(document.getElementById("firstNumber").value);
+        let y = parseInt(document.getElementById("secondNumber").value);
+        /*result element*/
+        let res = document.getElementById("result");
+        res.innerHTML = x / y;
+      }
+      function multiply() {
+        /*inputs values*/
+        let x = parseInt(document.getElementById("firstNumber").value);
+        let y = parseInt(document.getElementById("secondNumber").value);
+        /*result element*/
+        let res = document.getElementById("result");
+        res.innerHTML = x * y;
+      }
+    </script>
+  </body>
+</html>

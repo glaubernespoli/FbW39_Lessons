@@ -1,0 +1,28 @@
+body {
+  background-color: black;
+  padding: 10px 50px;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+}
+.container {
+  margin: auto;
+  border: 5px solid #fff;
+  background-color: #fff;
+}
+.img-grid {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(4, 610px);
+  grid-template-rows: repeat(2, 610px);
+  gap: 5px;
+}
+img {
+  max-width: 600px;
+}
+
+img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

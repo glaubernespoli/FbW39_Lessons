@@ -1,0 +1,13 @@
+    /* Samrtphones*/
+
+    body {
+        background-color: red;
+    }
+
+    h1.hide {
+        display: none;
+    }
+
+    div#smartphone>h1 {
+        display: block;
+    }
