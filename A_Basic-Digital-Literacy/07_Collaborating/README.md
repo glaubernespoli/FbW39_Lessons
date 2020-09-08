@@ -16,19 +16,13 @@ By the end of this sub module, learners should be able to:
 
 ![BDL Spreadsheet Excerpt](http://spreadshot.io/api/capture?id=2PACX-1vRmbQwSykUGZ0ft5T7p6_eAwOaQk-fAe2Jrq_D-7hILIa1eH-9W-7xMCbh5c92uXbFY5OOQnY-Oifl2&gid=0&single=true&range=C28:C30&width=525&height=250&scale=1.25)
 
-> Excerpt from the [curriculum content skeleton](https://docs.google.com/spreadsheets/d/1VoE5EOypjYJsOUufkZ6V3DzjLFOw0RVtZ8uqiIfiAd4/edit?usp=sharing)
-
 ---
 
 ## Materials and Resources
 
 ### Exercises
 
-The following section describes standalone exercises to give learners. For each exercise, follow the instructions below to share with your class:
-
-1. Clone the repository locally
-1. Re-upload it into your class' GitHub organization. **Make sure there is no solution branch in the uploaded repo**.
-1. Share the link to the exercise repository with students.
+The following section describes standalone exercises to give learners.
 
 #### Conflicts
 
@@ -36,9 +30,9 @@ The following section describes standalone exercises to give learners. For each 
 >
 > **Time**: ~ 30min
 >
-> **Link**: https://github.com/DigitalCareerInstitute/BDL-collaborating-conflicts/tree/master
+> **Link**:
 >
-> **Solution**: https://github.com/DigitalCareerInstitute/BDL-collaborating-conflicts/tree/solution
+> **Solution**:
 
 #### Collabs
 
@@ -46,9 +40,9 @@ The following section describes standalone exercises to give learners. For each 
 >
 > **Time**: ~ 15-30min
 >
-> **Link**: https://github.com/DigitalCareerInstitute/BDL-collaborating-review/tree/master
+> **Link**:
 >
-> **Solution**: https://github.com/DigitalCareerInstitute/BDL-collaborating-review/tree/solution
+> **Solution**:
 
 #### Git It Electron
 
@@ -56,9 +50,9 @@ The following section describes standalone exercises to give learners. For each 
 >
 > **Time**: ~ 2h
 >
-> **Link**: https://github.com/jlord/git-it-electron
+> **Link**:
 >
-> **Solution**: n/a
+> **Solution**:
 
 **Preparation:**
 

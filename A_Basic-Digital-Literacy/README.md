@@ -2,7 +2,7 @@
 
 > **Prerequisites**: None
 >
-> **Content**: [Curriculum Content Skeleton](https://docs.google.com/spreadsheets/d/1VoE5EOypjYJsOUufkZ6V3DzjLFOw0RVtZ8uqiIfiAd4/edit#gid=0)
+> **Content**:
 
 The Basic Digital Literacy module lays the foundation for the learners to be able to use common development tools and identify the technological basics of the internet, as well as introduces them to common workflows developers face in their day to day jobs. By the end of this module a learner should be able to:
 

@@ -23,7 +23,7 @@ By the end of this sub module, the learners should be able to:
 
 ### Exercises
 
-The following section describes standalone exercises to give learners. For each exercise, follow the instructions below to share with your class:
+The following section describes standalone exercises to give learners.
 
 #### I like to move it
 
