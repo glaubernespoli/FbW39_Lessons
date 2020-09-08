@@ -6,6 +6,8 @@
 
 The following pages describe the 11 month web development curriculum. Each folder above represents a **Top Level Module (TLM)** of the curriculum. Each **_TLM_** Contains in turn a set of folder to represent **Sub Modules (SM)**, which contains a set of learning objectives, topics to be learned, and exercises to be practiced in class.
 
+### Our topics materials will be added gradually at the time of teaching it.
+
 ## Linear TLM
 
 To fully understand the material in the curriculum, we can represent it as a dependency graph, where each module is preceeded to it's **_prerequisites_**.
