@@ -25,19 +25,15 @@ By the end of this sub module, the learners should be able to:
 
 The following section describes standalone exercises to give learners. For each exercise, follow the instructions below to share with your class:
 
-1. Clone the repository locally
-1. Re-upload it into your class' GitHub organization. **Make sure there is no solution branch in the uploaded repo**.
-1. Share the link to the exercise repository with students.
-
 #### I like to move it
 
 > **When**: After **Moving around**
 >
 > **Time**: ~5-10mins
 >
-> **Link**: https://github.com/DigitalCareerInstitute/BDL-navigating-movingaround/tree/master
+> **Link**: https://github.com/safwan-kher/FbW39_Lessons/tree/exercises/BDL-navigating-movingaround-master
 >
-> **Solution**: https://github.com/DigitalCareerInstitute/BDL-navigating-movingaround/tree/solution
+> **Solution**: https://github.com/safwan-kher/FbW39_Lessons/tree/solution/BDL-navigating-movingaround-solution
 
 #### Reading Directories
 
