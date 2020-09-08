@@ -41,9 +41,9 @@ The following section describes standalone exercises to give learners. For each 
 >
 > **Time**: ~ 5-10min
 >
-> **Link**: https://github.com/DigitalCareerInstitute/BDL-viewing-read_dir/tree/master
+> **Link**:
 >
-> **Solution**: https://github.com/DigitalCareerInstitute/BDL-viewing-read_dir/tree/solution
+> **Solution**:
 
 #### Reading Files
 
@@ -51,9 +51,9 @@ The following section describes standalone exercises to give learners. For each 
 >
 > **Time**: ~ 5-10min
 >
-> **Link**: https://github.com/DigitalCareerInstitute/BDL-navigating-readingfiles/tree/master
+> **Link**:
 >
-> **Solution**: https://github.com/DigitalCareerInstitute/BDL-navigating-readingfiles/tree/solution
+> **Solution**:
 
 #### Help
 
@@ -61,9 +61,9 @@ The following section describes standalone exercises to give learners. For each 
 >
 > **Time**: ~ 15-20min
 >
-> **Link**: https://github.com/DigitalCareerInstitute/BDL-viewing-help/tree/master
+> **Link**:
 >
-> **Solution**: https://github.com/DigitalCareerInstitute/BDL-viewing-help/tree/solution
+> **Solution**:
 
 ### Awesome Resources
 
