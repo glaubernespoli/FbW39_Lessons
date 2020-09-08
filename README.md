@@ -14,7 +14,7 @@ To fully understand the material in the curriculum, we can represent it as a dep
 
 The following graph represents potential tracks in order to grow our knowledge from Basic Literacy to the final project. The curriculum should be learned one module at a time and following the progressive order of the modules
 
-![Dependency Graph](https://drive.google.com/file/d/1aaYLlI-YdlCG0FC_H4C57pbFh2Kkbkzw/view)
+![Dependency Graph](https://drive.google.com/uc?export=view&id=1aaYLlI-YdlCG0FC_H4C57pbFh2Kkbkzw)
 
 > Curriculum Dependency Graph: [Google Drive](https://drive.google.com/file/d/1aaYLlI-YdlCG0FC_H4C57pbFh2Kkbkzw/view)
 
