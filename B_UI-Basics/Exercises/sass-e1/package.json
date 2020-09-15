@@ -1,0 +1,22 @@
+{
+  "name": "sass-e1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "sass": "node-sass -w public/sass/ -o public/css/ --recursive",
+    "dev": "concurrently --kill-others \"npm start\" \"npm run sass\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "connect-livereload": "^0.6.1",
+    "express": "^4.17.1",
+    "livereload": "^0.9.1",
+    "node-sass": "^4.14.1"
+  }
+}
