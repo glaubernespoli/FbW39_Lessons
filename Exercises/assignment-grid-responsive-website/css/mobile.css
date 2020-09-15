@@ -1,0 +1,33 @@
+/* Navigation */
+#main-nav .social {}
+
+#main-nav .container {}
+
+#main-nav ul,
+#main-nav .logo {}
+
+#main-nav ul li a {}
+
+#home-articles .articles-container {}
+
+#home-articles .articles-container>*:first-child,
+#home-articles .articles-container>*:last-child {}
+
+@media(max-width: 600px) {
+
+  /* Stack Grid Items */
+  #showcase .showcase-container,
+  #home-articles .articles-container,
+  #main-footer .footer-container {}
+
+  #main-footer .footer-container>*:last-child {}
+
+  #main-footer .footer-container>*:first-child,
+  #main-footer .footer-container>*:nth-child(2) {}
+
+  .page-container {}
+
+  .page-container>*:first-child {}
+
+  .l-heading {}
+}
