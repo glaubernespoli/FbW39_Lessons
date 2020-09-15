@@ -1,0 +1,56 @@
+body {
+    background-color: #333;
+    color: #fff;
+}
+
+div.t1 {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    transform: rotate(90deg);
+}
+
+div.t2 {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    /* transform: scale(2) */
+    /* transform: scaleX(1.5); */
+    transform: scaleY(1.5);
+}
+
+div.t3 {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+
+    /* transform: skew(15deg); */
+    transform: skewY(15deg);
+
+}
+
+div.t4 {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+
+
+    /* transform: translate(X axis, Y axis); */
+    /* left: 50px;
+    top: 100px; */
+    transform: translate(50px, 100px);
+
+}

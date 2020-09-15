@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>z-index Property</title>
+    <style>
+      h1 {
+        font-size: 60px;
+        color: white;
+      }
+      p {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bold;
+      }
+      img {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        /* width: 500px; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>z-index Property</h1>
+    <img src="https://picsum.photos/800?random=1" alt="random" />
+    <p>
+      An element with greater z-index will always apear in front for the lower
+      ones
+    </p>
+  </body>
+</html>
