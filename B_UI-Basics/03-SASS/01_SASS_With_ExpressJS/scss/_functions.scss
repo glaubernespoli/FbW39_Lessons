@@ -7,6 +7,32 @@
     }
 
     @else {
-        @return $light-color
+        @return $light-color;
+    }
+}
+
+//Transform mixin
+@mixin transform($property) {
+    transform: $property;
+
+}
+
+//Padding mixin
+@mixin padding($values...) {
+    @each $value in $values {
+        padding: #{$value};
+
+    }
+}
+
+//display mixin
+@mixin dispaly($value) {
+    @if($value) {
+        visibility: visible;
+    }
+
+    @else {
+        visibility: hidden;
+
     }
 }

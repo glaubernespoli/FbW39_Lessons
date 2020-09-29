@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Themes</title>
+  
+  <link rel="stylesheet" href="css/main.css">
+
+  <link 
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" 
+  rel="stylesheet"
+  />
+
+  <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous"
+  />
+</head>
+<body>
+  <nav class="navbar bg-dark">
+    <h1>
+      <a href="#"> <i class="fas fa-pencil-alt"></i> Theme </a>
+    </h1>
+    <ul class="nav-items">
+      <li><a href="#cards">Cards</a></li>
+      <li><a href="#alerts">Alerts</a></li>
+      <li><a href="#form">Form</a></li>
+    </ul>
+  </nav>
+
+  <div class="header">
+      <span class="header-title">Welcome to my SCSS theme</span> <br>
+      <span class="header-subtitle">These are some examples of how to use the theme</span>
+  </div>
+
+  <section class="container" id="cards">
+    <h1 class="large" >Cards:</h1>
+    <div class="line"></div>
+    <div class="card-container">
+        <div class="card">
+          <div class="img-cont">
+            <img src="imgs/cat.jpeg" alt="cat"/>
+          </div>
+          <div class="card-body">
+            <h3>Card 1</h3>
+            <p>Hi, I'm the inner text of this card :)</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="imgs/cat6.jpg" alt="cat"/>
+          </div>
+          <div class="card-body">
+            <h3>Card 2</h3>
+            <p>Hi, I'm the inner text of this card :)</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="imgs/cat3.jpg" alt="cat"/>
+          </div>
+          <div class="card-body">
+            <h3>Card 3</h3>
+            <p>Hi, I'm the inner text of this card :)</p>
+          </div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="container" id="alerts">
+      <h1 class="large" >Alerts:</h1>
+      <div class="line"></div>
+  
+      <div class="alert">
+        Normal alert
+      </div>
+      <div class="alert alert-primary">
+        Primary alert
+      </div>
+      <div class="alert alert-dark">
+        Dark alert
+      </div>
+      <div class="alert alert-success">
+        Success alert
+      </div>
+      <div class="alert alert-danger">
+        Danger alert
+      </div>
+      <div class="alert alert-warning">
+        Warning alert
+      </div>
+  </section>
+
+  <section class="container" id="form">
+
+    <h1 class="large" >Form:</h1>
+    <div class="line"></div>
+      <div class="form-group">
+        <input
+          type="email"
+          placeholder="Email Address"
+          name="email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+        />
+      </div>
+      <input type="submit" class="btn btn-primary" value="Login" />
+
+  </section>
+
+</body>
+</html>

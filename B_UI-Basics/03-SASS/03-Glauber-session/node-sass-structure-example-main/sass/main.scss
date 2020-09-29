@@ -1,0 +1,48 @@
+.screen {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+body {
+    background-color: green;
+}
+
+#rainy-days {
+    background-image: url('/images/raindrops.jpg');
+    background-size: auto 100%;
+    position: relative;
+
+    animation: rain 5s linear infinite;
+
+    img {
+        width: 15%;
+        position: absolute;
+        bottom: 0;
+
+        animation: totoro 5s linear infinite;
+    }
+}
+
+#retro-platformer {
+    background-color: black;
+    width: 100vw;
+    position: relative;
+
+    .bullet {
+        width: 20%;
+        position: absolute;
+        bottom: 0;
+
+        animation: bullet 5s linear infinite;
+    }
+
+    .mario {
+        width: 10%;
+        position: absolute;
+        bottom: 0;
+
+        animation: mario 5s linear infinite;
+    }
+}
