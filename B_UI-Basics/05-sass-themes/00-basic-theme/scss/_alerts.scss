@@ -1,0 +1,15 @@
+
+.alert {
+	padding: 0.8rem;
+	margin: 1rem;
+	opacity: 0.8;
+	background: $light-color;
+	color: #333;
+
+	@each $name,$color in $theme-colors{
+		&.alert-#{$name}{
+			@include set-background($color);
+		}
+	}
+
+}

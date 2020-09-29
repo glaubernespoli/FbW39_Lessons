@@ -1,0 +1,71 @@
+@media (max-width: 700px) {
+
+	.container {
+		margin-top: 8rem;
+	}
+
+	// Text Styles
+	.x-large {
+		font-size: 3rem;
+	}
+
+	.large {
+		font-size: 2rem;
+	}
+
+	.medium {
+		font-size: 1rem;
+	}
+
+	.navbar {
+		display: block;
+		text-align: center;
+
+		ul {
+			text-align: center;
+			justify-content: center;
+		}
+
+		h1 {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.header {
+
+		margin-top: 4rem;
+		height: 20rem;
+		padding: 5rem 5rem;
+		
+	
+		> .header-title{
+			font-size: 3rem;
+		}
+	
+		> .header-subtitle{
+			font-size: 1.5rem;
+		}
+	
+		&::after{
+			content: "";
+			height: 24rem;
+
+		}
+	
+	}
+
+	.card-container {
+		grid-template-columns: auto;
+	}
+
+
+	.card {
+	
+		> .img-cont {
+			max-height: 18rem;
+	
+		}
+	
+	}
+	
+}

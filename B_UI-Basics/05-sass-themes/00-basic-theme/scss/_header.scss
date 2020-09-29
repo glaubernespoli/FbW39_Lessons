@@ -1,0 +1,39 @@
+.header {
+
+  max-width: $max-width;
+  margin: auto;
+  margin-top: 4rem;
+  height: 20rem;
+  text-align: center;
+  padding: 4rem 5rem;
+  
+
+  > .header-title{
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  > .header-subtitle{
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  &::after{
+    content: "";
+    background-image: url($bg-header);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 24rem;
+    position: absolute;
+    z-index: -1; 
+  }
+
+}
